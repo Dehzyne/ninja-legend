@@ -41,10 +41,10 @@ canvas#arena{position:absolute;top:0;left:0;width:100%;height:100%;}
 #threat-bar{height:100%;width:0%;background:linear-gradient(90deg,#40c840,#f08020,#e84040);transition:width .3s;}
 
 /* BOTTOM HUD */
-#bottom-hud{flex-shrink:0;background:#1c1005;border-top:2px solid var(–border);}
+#bottom-hud{flex-shrink:0;background:#1c1005;border-top:2px solid var(–border);height:356px;display:flex;flex-direction:column;}
 
 /* Skill row — overlaps arena */
-#skill-row{display:flex;gap:4px;padding:0 6px;margin-top:-28px;position:relative;z-index:10;margin-bottom:3px;}
+#skill-row{display:flex;gap:4px;padding:4px 6px;margin-top:0;position:relative;z-index:1;margin-bottom:0;}
 .skslot{flex:1;height:52px;border:2px solid var(–border2);background:#1a0e05ee;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;cursor:pointer;}
 .skslot:active{opacity:.7;}
 .skslot.off{opacity:.35;}
@@ -86,8 +86,8 @@ canvas#arena{position:absolute;top:0;left:0;width:100%;height:100%;}
 .bbar-btn-lbl{font-family:‘Cinzel’,serif;font-size:5px;color:var(–gold);text-align:center;line-height:1.2;}
 
 /* Bottom nav */
-#bottom-nav{display:flex;gap:4px;padding:3px 6px;padding-bottom:max(22px,env(safe-area-inset-bottom));background:#1a0e05;border-top:1px solid var(–border);flex-shrink:0;}
-.bnav{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;background:#2a1608;border:2px solid var(–border2);border-radius:8px;padding:4px 2px;cursor:pointer;height:44px;}
+#bottom-nav{display:flex;gap:4px;padding:3px 6px;padding-bottom:max(env(safe-area-inset-bottom),3px);background:#1a0e05;border-top:1px solid var(–border);flex-shrink:0;height:70px;margin-top:8px;}
+.bnav{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;background:#2a1608;border:2px solid var(–border2);border-radius:8px;padding:4px 2px;cursor:pointer;height:100%;}
 .bnav.locked{opacity:.4;cursor:default;}
 .bnav.unlocked{border-color:var(–gold);}
 .bnav:active{opacity:.7;}
